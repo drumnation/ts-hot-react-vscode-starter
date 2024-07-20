@@ -1,8 +1,9 @@
 {
-  "name": "ai-component-refactor",
-  "displayName": "ai-component-refactor-webpack",
-  "description": "refactor with ai",
+  "name": "ts-react-ts-starter",
+  "displayName": "TS React Hot Reload VSCode Starter",
+  "description": "Streamline your VSCode extension development with this generator, featuring React integration and built-in hot reloading for efficient coding.",
   "version": "0.0.1",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.91.0"
   },
@@ -14,14 +15,16 @@
   "contributes": {
     "commands": [
       {
-        "command": "ai-component-refactor.helloWorld",
-        "title": "Hello World"
+        "command": "helloReact.openWebview",
+        "title": "Hello React"
       }
     ]
   },
   "scripts": {
     "vscode:prepublish": "yarn run package",
     "compile": "webpack",
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production",
     "watch": "webpack --watch",
     "package": "webpack --mode production --devtool hidden-source-map",
     "compile-tests": "tsc -p . --outDir out",
@@ -31,18 +34,43 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.91.0",
+    "@types/glob": "^8.1.0",
     "@types/mocha": "^10.0.7",
-    "@types/node": "20.x",
-    "@typescript-eslint/eslint-plugin": "^7.14.1",
-    "@typescript-eslint/parser": "^7.11.0",
-    "eslint": "^8.57.0",
-    "typescript": "^5.4.5",
-    "ts-loader": "^9.5.1",
-    "webpack": "^5.92.1",
-    "webpack-cli": "^5.1.4",
+    "@types/node": "^20.14.11",
+    "@types/react-dom": "^18.2.0",
+    "@types/react": "^18.2.0",
+    "@types/vscode": "^1.91.0",
+    "@types/webpack-env": "^1.18.5",
+    "@types/webpack": "^5.28.5",
+    "@typescript-eslint/eslint-plugin": "^7.16.1",
+    "@typescript-eslint/parser": "^7.16.1",
     "@vscode/test-cli": "^0.0.9",
-    "@vscode/test-electron": "^2.4.0"
+    "@vscode/test-electron": "^2.4.0",
+    "bufferutil": "^4.0.8",
+    "css-loader": "^6.7.3",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint": "^9.7.0",
+    "glob": "^11.0.0",
+    "mocha": "^10.6.1",
+    "prettier-eslint-cli": "^8.0.1",
+    "prettier-eslint": "^16.3.0",
+    "prettier": "^3.3.3",
+    "react-refresh": "^0.14.2",
+    "style-loader": "^3.3.2",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3",
+    "utf-8-validate": "^6.0.4",
+    "webpack-cli": "^5.1.4",
+    "webpack": "^5.92.1"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "eslintConfig": {
+    "extends": "./.eslintrc.js"
   },
   "packageManager": "yarn@1.22.21+sha1.1959a18351b811cdeedbd484a8f86c3cc3bbaf72"
 }

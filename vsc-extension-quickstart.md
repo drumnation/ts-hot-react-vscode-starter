@@ -1,5 +1,9 @@
 # Welcome to your VS Code Extension
 
+## Modified from npx yo code
+
+* React installed and hot-reloading configured.
+
 ## What's in the folder
 
 * This folder contains all of the files necessary for your extension.
