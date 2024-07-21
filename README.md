@@ -2,6 +2,13 @@
 
 This is the README for your extension "helloReact". After writing up a brief description, we recommend including the following sections.
 
+## Modified from npx yo code
+
+* React installed and hot-reloading configured.
+* @vscode/webview-ui-toolkit/react installed and configured
+
+![Hello React](./docs/screenshot.png "Screenshot")
+
 ## Features
 
 Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
