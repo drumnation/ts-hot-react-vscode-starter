@@ -9,7 +9,8 @@ export function setupHotReload(context: vscode.ExtensionContext, panel: vscode.W
         let cssSrc = panel.webview.asWebviewUri(
             vscode.Uri.file(path.join(context.extensionPath, 'dist', 'webview.css'))
         );
-        
+        let toolkitCssSrc = 'https://unpkg.com/@vscode/webview-ui-toolkit@1.0.0/dist/toolkit.min.css';
+
         panel.webview.html = `<!DOCTYPE html>
         <html lang="en">
         <head>
@@ -17,6 +18,7 @@ export function setupHotReload(context: vscode.ExtensionContext, panel: vscode.W
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>AI Component Refactor</title>
             <link rel="stylesheet" href="${cssSrc}" />
+            <link rel="stylesheet" href="${toolkitCssSrc}" />
         </head>
         <body>
             <div id="root"></div>

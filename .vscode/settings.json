@@ -11,9 +11,12 @@
   // Turn off tsc task auto detection since we have the necessary tasks as npm scripts
   "typescript.tsc.autoDetect": "off",
   "workbench.colorCustomizations": {
-    "activityBar.background": "#4A1B47",
-    "titleBar.activeBackground": "#682563",
-    "titleBar.activeForeground": "#FDF9FC"
+    "activityBar.background": "#f39c12",
+    "activityBar.foreground": "#ffffff",
+    "titleBar.activeBackground": "#f1c40f",
+    "titleBar.inactiveBackground": "#f39c12dd",
+    "titleBar.activeForeground": "#2c3e50",
+    "titleBar.inactiveForeground": "#2c3e50cc"
   },
   "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
   "editor.formatOnType": false,

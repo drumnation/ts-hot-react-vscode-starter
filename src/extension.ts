@@ -1,27 +1,12 @@
 import * as vscode from 'vscode';
-import { setupHotReload } from './setup/hotReload';
+
+import { createWebviewPanel } from './setup/webviewManager';
 
 export function activate(context: vscode.ExtensionContext) {
-    let currentPanel: vscode.WebviewPanel | undefined = undefined;
+    console.log('React Hot TS Starter extension is now active!');
 
     const command = vscode.commands.registerCommand('helloReact.openWebview', () => {
-        if (!currentPanel) {
-            currentPanel = vscode.window.createWebviewPanel(
-                'helloReact',
-                'Hello React!',
-                vscode.ViewColumn.One,
-                {
-                    enableScripts: true,
-                    retainContextWhenHidden: true,
-                }
-            );
-
-            currentPanel.onDidDispose(() => {
-                currentPanel = undefined;
-            });
-
-            setupHotReload(context, currentPanel);
-        }
+        createWebviewPanel(context);
     });
 
     context.subscriptions.push(command);
